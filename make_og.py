@@ -83,11 +83,8 @@ def center_text(y, text, font, fill, tracking=0):
         x += w + tracking * SS
     return total
 
-# --- eyebrow ---
-center_text(int(0.24 * H * SS), "YOU'RE INVITED", f_eyebrow, ORANGE, tracking=11)
-
 # --- wax seal with a heart ---
-scx, scy, sr = W * SS // 2, int(0.42 * H * SS), 54 * SS
+scx, scy, sr = W * SS // 2, int(0.36 * H * SS), 58 * SS
 d.ellipse([scx - sr, scy - sr, scx + sr, scy + sr], fill=(110, 29, 46))
 d.ellipse([scx - sr, scy - sr, scx + sr, scy + sr], outline=GOLD, width=2 * SS)
 # parametric heart, gold
@@ -101,7 +98,7 @@ for i in range(0, 361, 4):
 d.polygon(hpts, fill=GOLD)
 
 # --- the question (gilded) ---
-center_text(int(0.62 * H * SS), "Will you be my bridesmaid?", f_q, GOLD)
+center_text(int(0.60 * H * SS), "Will you be my bridesmaid?", f_q, GOLD)
 
 # --- downsample ---
 final = img.resize((W, H), Image.LANCZOS)
